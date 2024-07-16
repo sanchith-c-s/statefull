@@ -1,29 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:statefull/drawer.dart';
+import 'package:statefull/gesture.dart';
 import 'dart:math';
+
+import 'package:statefull/silverappbar.dart';
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
+  
  
   @override
   State<MyApp> createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
-   int _randomNum=2;
+   //int _randomNum=2;
 
    void _makeRandomNumber(){
     setState(() {
-      _randomNum=Random().nextInt(1000)+1;
+      //_randomNum=Random().nextInt(1000)+1;
     });
    }
   @override
   Widget build(BuildContext context) {
+    
     return MaterialApp(
-      home: Scaffold(
+      debugShowCheckedModeBanner: false,
+      home: Side()
+      /*Scaffold(
         appBar: AppBar(
           title: Text(
             'random number',
@@ -56,7 +64,7 @@ class _MyAppState extends State<MyApp> {
         child: Icon(Icons.autorenew),
         backgroundColor: Colors.red,
         foregroundColor: Colors.white,),
-      ),
+      ),*/
     );
   }
 }
