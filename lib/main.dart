@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:statefull/alert.dart';
 import 'package:statefull/drawer.dart';
 import 'package:statefull/gesture.dart';
 import 'dart:math';
@@ -30,7 +31,7 @@ class _MyAppState extends State<MyApp> {
     
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Side()
+      home: Alert()
       /*Scaffold(
         appBar: AppBar(
           title: Text(
